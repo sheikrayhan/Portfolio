@@ -1,0 +1,13 @@
+#myService{
+    // background-color: $bgColor;
+    h2{
+        @include heading;
+    }
+    .service_card{
+        margin-top: 100px;
+        position: relative;
+        .service_info{
+            @include service_layout;
+        }
+    }
+}

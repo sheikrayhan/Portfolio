@@ -1,0 +1,60 @@
+// Common CSS Start
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import './color';
+body,html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: $bgColor;
+    
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+span,
+small,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    display: inline-block;
+}
+
+// Common CSS End 
+// Mother CSS......
+@import './mixin';
+@import './header';
+@import './nav';
+@import './about';
+@import './resume';
+@import './hobbies';
+@import './testmonial';
+@import './counter';
+@import './workingProcess';
+@import './service';
+@import './portfolio';
+@import './add';
+@import './contact';
+@import './footer';
+@import './bogPage';

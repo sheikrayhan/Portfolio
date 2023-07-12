@@ -1,0 +1,470 @@
+@mixin titleDivider($lineLeft:calc(50% - 44px), $lineRight:calc(50% - 44px), $thitaPos:calc(50% - 16px)){
+    position: relative;
+    &::before, &::after{
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: #25ca7f;
+        bottom: -15px;
+        left: $lineLeft;
+    }
+    &::after{
+        left: auto;
+        right: $lineRight;
+    }
+    .thita{
+        width: 32px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        left: $thitaPos;
+        bottom: -26px;
+        &::before,&::after{
+            position: absolute;
+            content: "";
+            width: 14px;
+            height: 14px;
+            top: 0;
+            left: 0;
+            border: 2px solid #25ca7f;
+            border-radius: 50% 50% 0% 50%;
+            transform: rotate(-45deg);
+        }
+        &::after{
+            left: auto;
+            right: 0px;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-radius: 50% 50% 50% 0%;
+        }
+    }
+}
+
+
+@mixin roundDot($top:-80px, $left:-312px){
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $secondaryColor;
+    top: $top;
+    left: $left;
+}
+
+@mixin roundShape($top:-84px, $left:-316px){
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $secondaryColor;
+    top: $top;
+    left: $left;
+}
+
+@mixin heading {
+    color: $secondaryColor;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $secondaryColor;
+    transition: linear .4s;
+    &:hover {
+        color: $primary_textColor
+    }
+    &:hover span {
+        color: $secondaryColor;
+        transition: linear .4s;
+    }
+    span {
+        color: $primary_textColor;
+    }
+}
+
+@mixin resume_card{
+    background-color: $primaryColor;
+    border-radius: 10px;
+    transition: all linear .4s;
+    padding: 40px 40px 40px 70px;
+    &:hover{
+        box-shadow: $boxShadowColor;
+    }
+    h4 {
+        color: $secondaryColor;
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        @include titleDivider()
+    }
+    .rsm_card{
+        margin-bottom: 30px;
+        position: relative;
+        &:last-child {
+            border-bottom: none;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 100%;
+            background-color: $secondaryColor;
+            left: -40px;
+            top: 0;
+        }
+        &:hover h6::after{
+            background-color: $secondaryColor;
+            left: -20px;
+        }
+        h5 {
+            color: $primary_textColor;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: 30px;
+                background-color: $secondaryColor;
+                left: -40px;
+                top: 13px;
+            }
+        }
+        h6 {
+            color: $secondaryColor;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 300;
+            padding: 10px 0px 20px 0px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                border: 2px solid $secondaryColor;
+                background-color: $primaryColor;
+                left: -46px;
+                top: -17px;
+                z-index: 1;
+                transition: all linear .3s;
+            }
+        }
+        p {
+            color: $primary_textColor;
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    }
+}
+
+@mixin service_layout{
+    background-color: $primaryColor;
+    padding: 35px 30px;
+    border-radius: 10px;
+    transition: linear .4s;
+    &:hover {
+        box-shadow: $boxShadowColor;
+    }
+    &:hover .serviceIcon::before{
+        height: 60px;
+        width: 60px;
+        visibility: visible;
+        opacity: 1;
+    }
+    .serviceIcon{
+        color: $primary_textColor;
+        font-size: 30px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            height: 0px;
+            width: 0px;
+            border-radius: 50%;
+            border: 2px solid $secondaryColor;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            visibility: none;
+            transition: all linear .3s;
+        }
+    }
+    h4 {
+        color: $secondaryColor;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    p {
+        color: $primary_textColor;
+        font-size: 15px;
+        padding: 20px 0px;
+        text-align: justify;
+    }
+}
+
+@mixin portfolio_slider{
+    margin-top: 80px;
+    .portfolio_slider_dots {
+        @include slider_dots;
+    }
+    .portfolioSlider_items {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: rgba(37, 202, 127, 0.7);
+            inset: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transition: .4s ease-in-out;
+        }
+        &.slick-center:before {
+            opacity: 0.5;
+            visibility: visible;
+            transform: scale(1);
+        }
+        &.slick-center .portfolio_title {
+            opacity: 1;
+            visibility: visible;
+        }
+        .project_img {
+            img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+        .portfolio_title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: linear .4s;
+            .titles {
+                &:hover h5 {
+                    color: $bgColor;
+                    transition: linear .4s;
+                }
+                h5 {
+                    color: $primary_textColor;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                }
+                a {
+                    color: $primaryColor;
+                    font-size: 14px;
+                    padding-top: 5px;
+                    &:hover {
+                        color: $primary_textColor;
+                        transition: linear .4s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin slider_dots{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    li{
+        line-height: 0;
+        display: inline-block;
+        margin-right: 5px;
+        &.slick-active button{
+            width: 25px;
+            background-color: $secondaryColor;
+        }
+        button{
+            background: none;
+            border: none;
+            font-size: 0;
+            width: 10px;
+            height: 6px;
+            background-color: $primaryColor;
+            border-radius: 5px;
+            transition: .5s linear;
+        }
+    }
+}
+
+@mixin filtr_card{
+    position: relative;
+    // z-index: 55;
+    &:hover .filtr_title {
+        opacity: 1;
+        visibility: visible;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 51%;
+        left: 50%;
+        background: rgba(37, 202, 127, 0.2);
+        opacity: 0;
+        z-index: 1;
+    }
+    &:hover::after {
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transition: all 500ms linear;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 51%;
+        bottom: 50%;
+        right: 0;
+        left: 0;
+        background: rgba(37, 202, 127, 0.2);
+        opacity: 0;
+        z-index: 1;
+    }
+    &:hover::before {
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: all 500ms linear;
+    }
+    .filtr_img {
+        img {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    .filtr_title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: linear .4s;
+        z-index: 99;
+        h6 {
+            color: $primary_textColor;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+        a {
+            font-size: 16px;
+            color: $primaryColor;
+            font-weight: 500;
+            margin-top: 8px;
+            border: 2px solid $primaryColor;
+            padding: 8px 8px;
+            border-radius: 10px;
+            transition: linear .4s;
+        }
+    }
+}
+
+@mixin contact_inner_header{
+    color: $secondaryColor;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+@mixin getinTouch{
+    .icon {
+        color: $secondaryColor;
+        font-size: 25px;
+        padding-right: 15px;
+    }
+    .info {
+        h5 {
+            color: $secondaryColor;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+        a {
+            color: $secondary_textColor;
+            font-size: 16px;
+            padding-top: 5px;
+        }
+    }
+}
+
+@mixin social{
+    margin: 30px 0px;
+    li a {
+        color: $primary_textColor;
+        font-size: 22px;
+        transition: all linear .4s; 
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+}
+
+@mixin xxlResponsive(){
+    @media  (1400px <= width){
+        @content
+    }
+}
+
+@mixin xlResponsive(){
+    @media (1200px <= width < 1400px){
+        @content
+    }   
+}
+
+
+@mixin lgResponsive(){
+    @media (992px <= width < 1200px){
+        @content
+    }
+}
+
+
+@mixin mdResponsive(){
+    @media  (768px <= width < 992px){
+        @content
+    }
+}
+
+
+@mixin smResponsive(){
+    @media (576px <= width < 768px){
+        @content
+    }
+}
+
+
+
+@mixin xsResponsive(){
+    @media  (width < 576px){
+        @content
+    }
+}
+
+
+@mixin customResponsive($min, $max){
+    @media  ($min <= width < $max){
+        
+    }
+}

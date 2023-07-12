@@ -1,0 +1,30 @@
+#portFolio{
+    // background-color: $bgColor;
+    margin: 100px 0px;
+    overflow-y: hidden;
+    h2{
+        @include heading;
+    }
+    .portfolio_slider{
+        @include portfolio_slider;
+    }
+    .filtr_control{
+        margin-top: 150px;
+        li{
+            border: none;
+            color: $primary_textColor;
+            background-color: $primaryColor;
+            box-shadow: inset 0px 0px 20px -6px $secondaryColor;
+            cursor: pointer !important;
+            &.active{
+                color: $secondaryColor;
+                background-color: $primaryColor;
+            }
+        }
+    }
+    .portfolio_filtr{
+        .filtr_item{
+           @include filtr_card;
+        }
+    }
+}

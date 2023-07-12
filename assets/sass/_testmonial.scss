@@ -1,0 +1,61 @@
+#testmonial{
+    margin-top: 80px;
+    h2{
+        @include heading;
+    }
+    .testinner_div{
+        margin-top: 50px;
+        .testmnl_maindiv{
+            background-color: $primaryColor;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all linear .4s;
+            &:hover{
+                box-shadow: $boxShadowColor;
+            }
+            .img-sec{
+                .img{
+                    width: 80px;
+                    height: 80px;
+                    margin-right: 20px;
+                    img{
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                .heading{
+                    h3{
+                        color: $primary_textColor;
+                        font-size: 20px;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                    }
+                    p{
+                        color: $secondary_textColor;
+                        font-size: 14px;
+                        padding-top: 7px;
+                        letter-spacing: 1px;
+                    }
+                }
+                .ratting{
+                    margin-left: 100px;
+                    i{
+                        color: $secondaryColor;
+                        margin-left: 3px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .info_sec{
+                margin-top: 20px;
+                p{
+                    color: $primary_textColor;
+                    font-size: 16px;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

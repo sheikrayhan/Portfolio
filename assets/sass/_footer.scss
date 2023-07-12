@@ -1,0 +1,35 @@
+#footer{
+    background-color: $primaryColor;
+    box-shadow: $boxShadowColor;
+    p{
+        padding: 20px 0px;
+        color: $primary_textColor;
+        font-size: 14px;
+        letter-spacing: 3px;
+        i{
+            color: $secondaryColor;
+        }
+        span{
+            color: $secondaryColor;
+        }
+    }
+}
+#backtoTop{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    color: $secondaryColor;
+    border: none;
+    border-radius: 50%;
+    background: $primaryColor;
+    transition: .4s;
+    cursor: pointer;
+    display: none;
+    &:hover{
+        color: $primaryColor;
+        background-color: $secondaryColor;
+    }
+}

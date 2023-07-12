@@ -1,0 +1,93 @@
+#contact{
+    margin-bottom: 100px;
+    h2{
+        @include heading;
+    }
+    .contact_container{
+        margin-top: 45px;
+        background-color: $primaryColor;
+        border-radius: 10px;
+        transition: all linear .4s;
+        &:hover{
+            box-shadow: $boxShadowColor;
+        }
+        .message_section {
+            padding: 40px 30px;
+            h6 {
+                @include contact_inner_header;
+            }
+            form{
+                margin-top: 50px;
+                .input_button{
+                    color: $primary_textColor;
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    margin-bottom: 30px;
+                    background: none;
+                    text-align: center;
+                    border: none;
+                    border-bottom: 2px solid $bgColor;
+                    border-radius: 20px;
+                    outline: none;
+                    transition: all linear .3s;
+                    &:focus{
+                        border-bottom: 2px solid $secondaryColor;
+                    }
+                }
+                textarea{
+                    resize: none;
+                    font-family: 'Roboto', sans-serif;
+                }
+                button{
+                    background: none;
+                    border: none;
+                    color: $primary_textColor;
+                    padding: 10px 0px;
+                    position: relative;
+                    z-index: 1;
+                    transition: all linear .3s;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        width: 0%;
+                        height: 0%;
+                        border: 2px solid $secondaryColor;
+                        border-radius: 10px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all linear .3s;
+                        z-index: -1;
+                    }
+                    &:hover::before{
+                        visibility: visible;
+                        opacity: 1;
+                        width: 30%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .getin_touch{
+            padding: 40px 30px;
+            h6{
+                @include contact_inner_header;
+            }
+            .phone{
+                margin-top: 50px;
+               @include getinTouch;
+            }
+            .email{
+                @include getinTouch;
+            }
+            .address{
+                @include getinTouch;
+            }
+            .social_icon{
+                @include social;
+            }
+        }
+    }
+}

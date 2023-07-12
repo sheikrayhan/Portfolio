@@ -1,0 +1,80 @@
+#nav_bar{
+    nav{
+        background-color: $primaryColor;
+        position: relative;
+        box-shadow: $boxShadowColor;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999999;
+        &.active{
+            position: fixed;
+            animation: menu_fixed 1s;
+        }
+        @keyframes menu_fixed {
+            from {
+                top: -100px;
+            }
+            to {
+                top: 0px;
+            }
+        }
+        .branding{
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 150px;
+                border: 7px solid rgba(255, 255, 255, 0.84);
+                border-radius: 50%;
+                box-shadow: $boxShadowColor;
+                z-index: 5;
+            }
+            .brandTitle {
+                    h5 {
+                        color: $primary_textColor;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        margin-bottom: 7px;
+                    }
+            
+                    h6 {
+                        color: $secondaryColor;
+                        font-weight: 300;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                    }
+                }
+        }
+        ul li{
+            & a.active{
+                    color: $secondaryColor;
+                }
+            a{
+                padding: 18px 5px;
+                margin: 0px 9px;
+                color: $primary_textColor;
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                transition: linear .4s;
+                transform: scale(1);
+                &:hover{
+                    color: $secondaryColor;
+                    transform: scale(110%);
+                }
+            }
+            .secondMenu{
+                background: $primaryColor;
+                li{
+                    a{
+                        background: none;
+                    }
+                }
+            }
+        } 
+        
+    }
+}

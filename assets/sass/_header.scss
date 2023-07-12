@@ -1,0 +1,116 @@
+#header{
+    height: 570px;
+    background-image: url(../images/headerh.png);
+    background-attachment: fixed !important;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 9;
+    &::after{
+        content: '';
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        right: 51%;
+        bottom: 0;
+        left: 50%;
+        background: rgba(37, 202, 127, .1);
+        transform: skew(45deg);
+        z-index: -1;
+    }
+    &:hover::after{
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: all 900ms linear;
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-color: black;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    .social_icon{
+        ul li{
+            padding-right: 30px;
+        }
+         a{
+            color: $primary_textColor;
+            font-size: 22px;
+            transition: linear .4s;
+            &:hover{
+                color: $secondaryColor;
+            }
+        }
+    }
+    .header_title{
+        color: $primary_textColor;
+        h4{
+            font-size: 30px;
+            letter-spacing: 3px;
+            font-weight: 300;
+            span{
+                color: $secondaryColor;
+            }
+        }
+        h1{
+            font-size: 80px;
+            letter-spacing: 7px;
+            font-weight: 500;
+            padding: 10px 0px 10px 0px;
+            transition: .4s;
+            &:hover{
+                color: $secondaryColor;
+            }
+            @include lgResponsive(){
+                font-size: 60px;
+            }
+            @include mdResponsive(){
+                font-size: 40px;
+            }
+        }
+        h5{
+            font-size: 20px;
+            letter-spacing: 5px;
+            font-weight: 300;
+            span{
+                color: $secondaryColor;
+            }
+        }
+        a{
+            color: $primary_textColor;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin-top: 50px;
+            padding: 8px 15px;
+            position: relative;
+            transition: all linear .3s;
+            &::after{
+                position: absolute;
+                content: '';
+                height: 0%;
+                width: 0%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid $secondaryColor;
+                opacity: 0;
+                visibility: none;
+                transition: all linear .3s;
+            }
+            &:hover{
+                color: $secondaryColor;
+            }
+            &:hover::after{
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
