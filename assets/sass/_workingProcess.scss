@@ -13,6 +13,7 @@
             font-weight: 500;
             letter-spacing: 2px;
             position: relative;
+            @include titleDivider();
         }
         .wp_info{
             margin-top: 20px;

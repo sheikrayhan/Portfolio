@@ -15,6 +15,7 @@
             padding: 40px 30px;
             h6 {
                 @include contact_inner_header;
+                @include titleDivider(0,calc(100% - 92px),30px);
             }
             form{
                 margin-top: 50px;
@@ -74,6 +75,7 @@
             padding: 40px 30px;
             h6{
                 @include contact_inner_header;
+                @include titleDivider(0, calc(100% - 92px), 30px);
             }
             .phone{
                 margin-top: 50px;

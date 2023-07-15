@@ -15,6 +15,7 @@
             letter-spacing: 2px;
             margin-bottom: 30px;
             position: relative;
+            @include titleDivider();
         }
         .hobbi_innerdiv{
             .hobbi_info{
