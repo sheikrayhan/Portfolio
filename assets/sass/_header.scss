@@ -6,6 +6,21 @@
     background-position: center;
     position: relative;
     z-index: 9;
+    @include xlResponsive(){
+        height: 550px;
+    }
+    @include lgResponsive() {
+        height: 520px;
+    }
+    @include mdResponsive(){
+        height: 500px;
+    }
+    @include smResponsive() {
+        height: 450px;
+    }
+    @include xsResponsive(){
+        height: 400px;
+    }
     &::after{
         content: '';
         position: absolute;
@@ -35,6 +50,13 @@
     .social_icon{
         ul li{
             padding-right: 30px;
+            @include smResponsive() {
+                padding-right: 27px;
+            }
+            
+            @include xsResponsive() {
+                padding-right: 26px;
+            }
         }
          a{
             color: $primary_textColor;
@@ -42,6 +64,15 @@
             transition: linear .4s;
             &:hover{
                 color: $secondaryColor;
+            }
+            @include lgResponsive(){
+                font-size: 20px;
+            }
+            @include smResponsive() {
+                font-size: 18px;
+            }
+            @include xsResponsive(){
+                font-size: 17px;
             }
         }
     }
@@ -54,6 +85,15 @@
             span{
                 color: $secondaryColor;
             }
+            @include mdResponsive(){
+                font-size: 27px;
+            }
+            @include smResponsive() {
+                font-size: 24px;
+            }
+            @include xsResponsive() {
+                font-size: 18px;
+            }
         }
         h1{
             font-size: 80px;
@@ -64,11 +104,23 @@
             &:hover{
                 color: $secondaryColor;
             }
+            @include xlResponsive(){
+                font-size: 75px;
+            }
             @include lgResponsive(){
                 font-size: 60px;
             }
             @include mdResponsive(){
                 font-size: 40px;
+                padding: 15px 0px 15px 0px;
+            }
+            @include smResponsive() {
+                font-size: 36px;
+                padding: 15px 0px 15px 0px;
+            }
+            @include xsResponsive() {
+                font-size: 20px;
+                padding: 15px 0px 10px 0px;
             }
         }
         h5{
@@ -77,6 +129,16 @@
             font-weight: 300;
             span{
                 color: $secondaryColor;
+            }
+            @include mdResponsive(){
+                font-size: 18px;
+            }
+            @include smResponsive() {
+                font-size: 17px;
+            }
+
+            @include xsResponsive() {
+                font-size: 17px;
             }
         }
         a{
@@ -100,6 +162,17 @@
                 opacity: 0;
                 visibility: none;
                 transition: all linear .3s;
+                @include mdResponsive(){
+                    border: 1px solid $secondaryColor
+                }
+                @include smResponsive() {
+                    border: 1px solid $secondaryColor
+                    
+                }
+                @include xsResponsive() {
+                    border: 1px solid $secondaryColor
+                    
+                }
             }
             &:hover{
                 color: $secondaryColor;
@@ -110,6 +183,16 @@
                 height: 100%;
                 width: 100%;
                 border-radius: 5px;
+            }
+            @include mdResponsive(){
+                font-size: 15px;
+                
+            }
+            @include smResponsive() {
+                font-size: 14px;
+            }
+            @include xsResponsive(){
+                font-size: 12px;
             }
         }
     }

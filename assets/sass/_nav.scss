@@ -30,6 +30,9 @@
                 border-radius: 50%;
                 box-shadow: $boxShadowColor;
                 z-index: 5;
+                @include lgResponsive() {
+                    width: 130px;
+                }
             }
             .brandTitle {
                     h5 {
@@ -45,6 +48,10 @@
                         font-weight: 300;
                         font-size: 14px;
                         letter-spacing: 2px;
+                        @include lgResponsive() {
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                        }
                     }
                 }
         }
@@ -64,6 +71,10 @@
                 &:hover{
                     color: $secondaryColor;
                     transform: scale(110%);
+                }
+                @include lgResponsive(){
+                    margin: 0px 5px;
+                    font-size: 13px;
                 }
             }
             .secondMenu{
