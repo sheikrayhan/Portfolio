@@ -90,6 +90,16 @@
     border-radius: 10px;
     transition: all linear .4s;
     padding: 40px 40px 40px 70px;
+    height: 100%;
+    @include mdResponsive(){
+        margin-top: 50px;
+    }
+    @include smResponsive(){
+        margin-top: 40px;
+    }
+    @include xsResponsive(){
+        margin-top: 30px;
+    }
     &:hover{
         box-shadow: $boxShadowColor;
     }
@@ -99,6 +109,15 @@
         letter-spacing: 2px;
         font-weight: 500;
         margin-bottom: 50px;
+        @include mdResponsive(){
+            font-size: 22px;
+        }
+        @include smResponsive(){
+            font-size: 21px;
+        }
+        @include xsResponsive(){
+            font-size: 20px;
+        }
         @include titleDivider()
     }
     .rsm_card{
@@ -126,6 +145,24 @@
             font-size: 20px;
             font-weight: 500;
             position: relative;
+            @include xlResponsive(){
+                font-size: 18px;
+            }
+            @include lgResponsive(){
+                font-size: 17px;
+            }
+            @include mdResponsive(){
+                font-size: 17px;
+                font-weight: 300;
+            }
+            @include smResponsive(){
+                font-size: 17px;
+                font-weight: 300;
+            }
+            @include xsResponsive(){
+                font-size: 14px;
+                font-weight: 300;
+            }
             &::after{
                 position: absolute;
                 content: '';
@@ -156,12 +193,39 @@
             font-weight: 300;
             padding: 10px 0px 20px 0px;
             position: relative;
+            @include lgResponsive(){
+                font-size: 13px;
+            }
+            @include mdResponsive(){
+                font-size: 13px;
+                font-weight: normal;
+            }
+            @include smResponsive(){
+                font-size: 13px;
+                font-weight: normal;
+            }
+            @include xsResponsive(){
+                font-size: 12px;
+                font-weight: normal;
+            }
         }
         p {
             color: $primary_textColor;
             font-size: 15px;
             margin-bottom: 20px;
             text-align: justify;
+            @include lgResponsive(){
+                font-size: 14px;
+            }
+            @include mdResponsive(){
+                font-size: 14px;
+            }
+             @include smResponsive(){
+                font-size: 13px;
+            }
+            @include xsResponsive(){
+                font-size: 12px;
+            }
         }
     }
 }
