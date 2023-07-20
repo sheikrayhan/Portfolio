@@ -116,7 +116,7 @@
             left: -40px;
             top: 0;
         }
-        &:hover h6::after{
+        &:hover h5::before{
             background-color: $secondaryColor;
             left: -20px;
         }
@@ -135,15 +135,7 @@
                 left: -40px;
                 top: 13px;
             }
-        }
-        h6 {
-            color: $secondaryColor;
-            font-size: 14px;
-            letter-spacing: 1px;
-            font-weight: 300;
-            padding: 10px 0px 20px 0px;
-            position: relative;
-            &::after{
+            &::before{
                 position: absolute;
                 content: '';
                 height: 14px;
@@ -152,10 +144,18 @@
                 border: 2px solid $secondaryColor;
                 background-color: $primaryColor;
                 left: -46px;
-                top: -17px;
+                top: 7px;
                 z-index: 1;
                 transition: all linear .3s;
             }
+        }
+        h6 {
+            color: $secondaryColor;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 300;
+            padding: 10px 0px 20px 0px;
+            position: relative;
         }
         p {
             color: $primary_textColor;
@@ -421,6 +421,9 @@
         color: $primary_textColor;
         font-size: 20px;
         transition: all linear .4s; 
+        @include xsResponsive(){
+            font-size: 15px;
+        }
         &:hover {
             color: $secondaryColor;
         }
@@ -459,7 +462,6 @@
         @content
     }
 }
-
 
 
 @mixin xsResponsive(){
