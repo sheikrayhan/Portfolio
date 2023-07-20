@@ -411,9 +411,15 @@
 
 @mixin social{
     margin: 30px 0px;
+    @include smResponsive(){
+        margin: 15px 0px;
+    }
+    @include xsResponsive(){
+        margin: 10px 0px;
+    }
     li a {
         color: $primary_textColor;
-        font-size: 22px;
+        font-size: 20px;
         transition: all linear .4s; 
         &:hover {
             color: $secondaryColor;
