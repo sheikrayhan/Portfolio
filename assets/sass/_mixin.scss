@@ -224,6 +224,7 @@
 @mixin service_layout{
     background-color: $primaryColor;
     padding: 35px 30px;
+    height: 100%;
     border-radius: 10px;
     transition: linear .4s;
     &:hover {
@@ -238,6 +239,15 @@
     .serviceIcon{
         color: $primary_textColor;
         font-size: 30px;
+        @include mdResponsive(){
+            font-size: 25px;
+        }
+        @include smResponsive(){
+            font-size: 25px;
+        }
+        @include xsResponsive(){
+            font-size: 25px;
+        }
         position: relative;
         &::before{
             position: absolute;
@@ -260,12 +270,32 @@
         font-weight: 500;
         letter-spacing: 1px;
         margin-top: 20px;
+        @include mdResponsive(){
+            font-size: 18px;
+        }
+        @include smResponsive(){
+            font-size: 18px;
+            font-weight: 300;
+        }
+        @include xsResponsive(){
+            font-size: 18px;
+            font-weight: 300;
+        }
     }
     p {
         color: $primary_textColor;
         font-size: 15px;
         padding: 20px 0px;
         text-align: justify;
+        @include mdResponsive(){
+            font-size: 14px;
+        }
+        @include smResponsive(){
+            font-size: 14px;
+        }
+        @include xsResponsive(){
+            font-size: 14px;
+        }
     }
 }
 

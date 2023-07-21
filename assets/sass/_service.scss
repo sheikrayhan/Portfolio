@@ -5,6 +5,21 @@
     }
     .service_card{
         margin-top: 100px;
+        @include xlResponsive(){
+            margin-top: 70px;
+        }
+        @include lgResponsive(){
+            margin-top: 60px;
+        }
+        @include mdResponsive(){
+            margin-top: 50px;
+        }
+        @include smResponsive(){
+            margin-top: 40px;
+        }
+        @include xsResponsive(){
+            margin-top: 35px;
+        }
         position: relative;
         .service_info{
             @include service_layout;

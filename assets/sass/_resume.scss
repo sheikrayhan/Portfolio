@@ -70,6 +70,21 @@
                         font-size: 20px;
                         font-weight: 500;
                         letter-spacing: 2px;
+                        margin-bottom: 10px;
+                        @include lgResponsive(){
+                            font-size: 19px;
+                        }
+                        @include mdResponsive(){
+                            font-size: 18px;
+                        }
+                        @include smResponsive(){
+                            font-size: 18px;
+                            margin-bottom: 8px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 17px;
+                            margin-bottom: 5px;
+                        }
                     }
                     span{
                         line-height: 0;
