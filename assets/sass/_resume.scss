@@ -27,6 +27,15 @@
         .expertise_info{
            @include resume_card;
         }
+        @include mdResponsive(){
+            margin-bottom: 40px;
+        }
+        @include smResponsive(){
+            margin-bottom: 40px;
+        }
+        @include xsResponsive(){
+            margin-bottom: 35px;
+        }
     }
     .education{
         &:hover .expertise_info {
