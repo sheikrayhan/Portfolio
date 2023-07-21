@@ -1,5 +1,17 @@
 #hobies{
     margin-top: 80px;
+    @include mdResponsive(){
+        margin-top: 60px;
+    }
+    @include smResponsive(){
+        margin-top: 45px;
+    }
+    @include smResponsive(){
+        margin-top: 35px;
+    }
+    @include xsResponsive(){
+        margin-top: 30px;
+    }
     .hobbi_content{
         background-color: $primaryColor;
         border-radius: 10px;
@@ -33,12 +45,33 @@
                         color: $secondaryColor;
                         font-size: 20px;
                         padding-right: 15px;
+                        @include mdResponsive(){
+                            font-size: 15px;
+                        }
+                        @include smResponsive(){
+                            font-size: 15px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 15px;
+                        }
                     }
                     h3{
                         color: $primary_textColor;
                         font-size: 20px;
                         font-weight: 500;
                         letter-spacing: 2px;
+                        @include lgResponsive(){
+                            font-size: 18px;
+                        }
+                        @include mdResponsive(){
+                            font-size: 15px;
+                        }
+                        @include smResponsive(){
+                            font-size: 15px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 15px;
+                        }
                     }
                 }
             }
