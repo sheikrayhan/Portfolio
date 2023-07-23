@@ -5,6 +5,12 @@
     }
     .testinner_div{
         margin-top: 50px;
+        @include mdResponsive() {
+            margin-top: 40px;
+        }
+        @include xsResponsive(){
+            margin-top: 35px;
+        }
         .testmnl_maindiv{
             background-color: $primaryColor;
             border-radius: 10px;
@@ -22,6 +28,25 @@
                         width: 100%;
                         border-radius: 50%;
                     }
+                    @include lgResponsive(){
+                        width: 70px;
+                        height: 70px; 
+                        margin-right: 15px;
+                    }
+                    @include mdResponsive(){
+                        width: 70px;
+                        height: 70px; 
+                        margin-right: 15px;
+                    }
+                    @include smResponsive(){
+                        width: 65px;
+                        height: 65px; 
+                        margin-right: 10px;
+                    }
+                    @include xsResponsive(){
+                        width: 60px;
+                        height: 60px;
+                    }
                 }
                 .heading{
                     h3{
@@ -29,20 +54,50 @@
                         font-size: 20px;
                         font-weight: 500;
                         letter-spacing: 2px;
+                        @include lgResponsive(){
+                            font-size: 19px;
+                        }
+                        @include mdResponsive(){
+                            font-size: 18px;
+                        }
+                        @include smResponsive(){
+                            font-size: 16px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 15px;
+                        }
                     }
                     p{
                         color: $secondary_textColor;
                         font-size: 14px;
                         padding-top: 7px;
                         letter-spacing: 1px;
+                        @include xsResponsive(){
+                            font-size: 13px;
+                        }
                     }
                 }
                 .ratting{
                     margin-left: 100px;
+                    @include lgResponsive(){
+                        margin-left: 45px;
+                    }
+                    @include mdResponsive(){
+                        margin-left: 285px;
+                    }
+                    @include xsResponsive(){
+                        margin-left: 65px;
+                    }
                     i{
                         color: $secondaryColor;
                         margin-left: 3px;
                         font-size: 18px;
+                        @include smResponsive(){
+                            font-size: 16px;
+                        }
+                    @include xsResponsive(){
+                        font-size: 15px;
+                    }
                     }
                 }
             }
@@ -54,6 +109,17 @@
                     font-weight: 300;
                     letter-spacing: 1px;
                     text-align: justify;
+                    @include lgResponsive(){
+                        font-size: 15px;
+                    }
+                    @include mdResponsive(){
+                        font-size: 15px;
+                    }
+                    @include smResponsive(){
+                        font-size: 14px;
+                    }@include xsResponsive(){
+                        font-size: 14px;
+                    }
                 }
             }
         }
