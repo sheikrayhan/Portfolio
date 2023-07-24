@@ -300,7 +300,7 @@
 }
 
 @mixin portfolio_slider{
-    margin-top: 80px;
+    margin-top: 60px;
     .portfolio_slider_dots {
         @include slider_dots;
     }
@@ -311,6 +311,12 @@
             position: absolute;
             background-color: rgba(37, 202, 127, 0.7);
             inset: 15px;
+            @include smResponsive(){
+                inset: 10px;
+            }
+            @include xsResponsive(){
+                inset: 0px;
+            }
             opacity: 0;
             visibility: hidden;
             transform: scale(0);
@@ -348,6 +354,18 @@
                     color: $primary_textColor;
                     font-size: 20px;
                     letter-spacing: 2px;
+                    @include mdResponsive(){
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                    }
+                    @include smResponsive(){
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                    }
+                    @include xsResponsive(){
+                        font-size: 14px;
+                        letter-spacing: normal;
+                    }
                 }
                 a {
                     color: $primaryColor;
@@ -356,6 +374,9 @@
                     &:hover {
                         color: $primary_textColor;
                         transition: linear .4s;
+                    }
+                    @include xsResponsive(){
+                        font-size: 12px;
                     }
                 }
             }
