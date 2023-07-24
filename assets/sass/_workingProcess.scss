@@ -21,10 +21,24 @@
                 .wpBox{
                     margin: 30px 0px 30px 40px;
                     text-align: right;
+                    @include smResponsive(){
+                        margin: 30px 0px 30px 20px;
+                    }
+                    @include xsResponsive(){
+                        text-align: left;
+                        margin: 0px;
+                    }
                     .num{
                         color: $secondaryColor;
                         font-size: 22px;
                         font-weight: 700;
+                        @include smResponsive(){
+                            font-size: 20px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
                     }
                     h4{
                         color: $primary_textColor;
@@ -32,11 +46,21 @@
                         font-weight: 500;
                         letter-spacing: 2px;
                         margin: 10px 0px;
+                        @include smResponsive(){
+                            font-size: 18px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 17px;
+                            font-weight: 300;
+                        }
                     }
                     p{
                         color: $primary_textColor;
                         font-size: 14px;
                         // text-align: justify;
+                        @include xsResponsive() {
+                            font-size: 13px;
+                        }
                     }
                 }
             }
@@ -70,25 +94,33 @@
                     }
                 }
                 .dot_1{
-                    position: relative;
-                    &::before{
-                        @include roundDot(-80px, -312px);
-                    }
-                    &::after{
-                        @include roundShape(-84px, -316px);
-                    }
+                    display: inline-block;
+                    position: absolute;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50%;
+                    z-index: 1;
+                    background-color: $secondaryColor;
+                    // &::before{
+                    //     @include roundDot(-80px, -320px);
+                    // }
+                    // &::after{
+                    //     @include roundShape(-84px, -324px);
+                    // }
                 }
                 .dot_2{
                     position: relative;
+                    display: inline-block;
                     &::before{
-                        @include roundDot(65px, -312px);
+                        @include roundDot(65px, -325px);
                     }
                     &::after{
-                        @include roundShape(61px, -316px);
+                        @include roundShape(61px, -329px);
                     }
                 }
                 .dot_3{
                     position: relative;
+                    display: inline-block;
                     &::before{
                         @include roundDot(-80px, -38px);
                     }
@@ -98,6 +130,7 @@
                 }
                 .dot_4{
                     position: relative;
+                    display: inline-block;
                     &::before{
                         @include roundDot(65px, -38px);
                     }
@@ -109,10 +142,23 @@
             .concept_sec{
                 .wpBox{
                     margin: 30px 45px 30px 0px;
+                    @include smResponsive(){
+                        margin: 30px 20px 30px 0px;
+                    }
+                    @include xsResponsive(){
+                        margin: 0px;
+                    }
                     .num{
                         color: $secondaryColor;
                         font-size: 22px;
                         font-weight: 700;
+                        @include smResponsive(){
+                            font-size: 20px;
+                        }
+                        @include xsResponsive(){
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
                     }
                     h4{
                         color: $primary_textColor;
@@ -120,11 +166,22 @@
                         font-weight: 500;
                         letter-spacing: 2px;
                         margin: 10px 0px;
+                        @include smResponsive(){
+                            font-size: 18px;
+                        }
+                        @include xsResponsive() {
+                            font: 17px;
+                            font-weight: 300;
+                        }
+                        
                     }
                     p{
                         color: $primary_textColor;
                         font-size: 14px;
                         // text-align: justify;
+                        @include xsResponsive() {
+                            font-size: 13px;
+                        }
                     }
                 }
             }
