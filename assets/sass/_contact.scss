@@ -1,5 +1,5 @@
 #contact{
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     h2{
         @include heading;
     }
@@ -40,6 +40,7 @@
                     font-family: 'Roboto', sans-serif;
                 }
                 button{
+                    font-size: 16px;
                     background: none;
                     border: none;
                     color: $primary_textColor;
@@ -47,6 +48,18 @@
                     position: relative;
                     z-index: 1;
                     transition: all linear .3s;
+                    @include lgResponsive(){
+                        font-size: 15px;
+                    }
+                    @include mdResponsive(){
+                        font-size: 14px;
+                    }
+                    @include smResponsive(){
+                        font-size: 14px;
+                    }
+                    @include xsResponsive(){
+                        font-size: 14px;
+                    }
                     &::before{
                         position: absolute;
                         content: '';
@@ -66,6 +79,12 @@
                         visibility: visible;
                         opacity: 1;
                         width: 30%;
+                        @include mdResponsive(){
+                            width: 40%;
+                        }
+                        @include xsResponsive(){
+                            width: 50%;
+                        }
                         height: 100%;
                     }
                 }

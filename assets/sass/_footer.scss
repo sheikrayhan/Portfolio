@@ -6,6 +6,13 @@
         color: $primary_textColor;
         font-size: 14px;
         letter-spacing: 3px;
+        @include smResponsive(){
+            font-size: 13px;
+        }
+        @include xsResponsive(){
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
         i{
             color: $secondaryColor;
         }
@@ -16,7 +23,7 @@
 }
 #backtoTop{
     position: fixed;
-    right: 20px;
+    right: 10px;
     bottom: 30px;
     width: 30px;
     height: 30px;

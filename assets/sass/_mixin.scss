@@ -525,6 +525,21 @@
         color: $secondaryColor;
         font-size: 25px;
         padding-right: 15px;
+        @include lgResponsive(){
+            font-size: 22px;
+            padding-right: 10px;
+        }
+        @include mdResponsive(){
+            font-size: 20px;
+            padding-right: 10px;
+        }
+        @include smResponsive(){
+            font-size: 20px;
+        }
+        @include xsResponsive(){
+            font-size: 16px;
+            padding-right: 5px;
+        }
     }
     .info {
         h5 {
@@ -532,11 +547,36 @@
             font-size: 18px;
             letter-spacing: 1px;
             font-weight: 300;
+            @include lgResponsive(){
+                font-size: 17px;
+            }
+            @include mdResponsive(){
+                font-size: 15px;
+            }
+            @include smResponsive(){
+                font-size: 16px;
+            }
+            @include xsResponsive(){
+                font-size: 14px;
+                font-weight: normal;
+            }
         }
         a {
             color: $secondary_textColor;
             font-size: 16px;
             padding-top: 5px;
+            @include lgResponsive(){
+                font-size: 14px;
+            }
+            @include mdResponsive(){
+                font-size: 12px;
+            }
+            @include smResponsive(){
+                font-size: 14px;
+            }
+            @include xsResponsive(){
+                font-size: 11px;
+            }
         }
     }
 }
