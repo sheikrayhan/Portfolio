@@ -9,16 +9,24 @@
         @include portfolio_slider;
     }
     .filtr_control{
-        margin-top: 150px;
+        margin-top: 90px;
         li{
             border: none;
             color: $primary_textColor;
             background-color: $primaryColor;
             box-shadow: inset 0px 0px 20px -6px $secondaryColor;
             cursor: pointer !important;
+            text-align: center;
             &.active{
                 color: $secondaryColor;
                 background-color: $primaryColor;
+            }
+            @include smResponsive(){
+                font-size: 14px;
+            }
+            @include xsResponsive(){
+                font-size: 11px;
+                padding: 6px;
             }
         }
     }

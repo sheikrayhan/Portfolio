@@ -470,6 +470,19 @@
             color: $primary_textColor;
             letter-spacing: 2px;
             font-size: 20px;
+            @include lgResponsive(){
+                font-size: 19px;
+            }
+            @include mdResponsive(){
+                font-size: 18px;
+            }
+            @include smResponsive(){
+                font-size: 17px;
+            }
+            @include xsResponsive(){
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
         }
         a {
             font-size: 16px;
@@ -480,6 +493,19 @@
             padding: 8px 8px;
             border-radius: 10px;
             transition: linear .4s;
+            @include lgResponsive(){
+                font-size: 15px;
+            }
+            @include mdResponsive(){
+                font-size: 14px;
+            }
+            @include smResponsive(){
+                font-size: 14px;
+            }
+            @include xsResponsive(){
+                font-size: 12px;
+                padding: 4px;
+            }
         }
     }
 }
