@@ -1,5 +1,5 @@
 #blog{
-    margin: 100px 0px;
+    margin: 80px 0px;
     h2{
         @include heading;
     }
@@ -20,6 +20,19 @@
             width: 30%;
             height: 100%;
             overflow: hidden;
+            border-radius: 10px;
+            @include mdResponsive(){
+                height: 50%;
+                margin-top: 35px;
+            }
+            @include smResponsive(){
+                height: 40%;
+                margin-top: 25px;
+            }
+            @include xsResponsive(){
+                height: 30%;
+                margin-top: 20px;
+            }
             img{
                 height: 100%;
                 object-fit: cover;
@@ -30,12 +43,22 @@
         .blog_info{
             width: 70%;
             padding: 30px;
+            @include smResponsive(){
+                padding: 20px;
+            }
+            @include xsResponsive(){
+                padding: 10px;
+            }
             .blog_title{
                 h3{
                     color: $secondaryColor;
                     font-size: 22px;
                     font-weight: 700;
                     letter-spacing: 3px;
+                    @include xsResponsive(){
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
                 }
                 h5{
                     color: $secondary_textColor;
@@ -43,10 +66,21 @@
                     font-weight: 300;
                     letter-spacing: 1px;
                     padding: 15px 0px;
+                    @include smResponsive(){
+                        padding: 10px 0px;
+                    }
+                    @include xsResponsive(){
+                        padding: 5px 0px;
+                        font-size: 15px;
+                    }
                     span{
                         color: $primary_textColor;
                         padding: 0px 20px;
                         font-size: 20px;
+                        @include xsResponsive(){
+                            font-size: 15px;
+                            padding: 0px 0px;
+                        }
                     }
                 }
             }
@@ -56,9 +90,19 @@
                     color: $primary_textColor;
                     font-size: 15px;
                     font-weight: 300;
+                    @include smResponsive(){
+                        font-weight: normal;
+                    }
+                    @include xsResponsive(){
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
                     &::first-letter{
                         color: $secondaryColor;
                         font-size: 20px;
+                        @include xsResponsive(){
+                            font-size: 18px;
+                        }
                     }
                 }
             }
