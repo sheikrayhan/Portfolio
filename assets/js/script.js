@@ -1,10 +1,13 @@
 //Typed JS
-var typed = new Typed('.banner_typed', {
-   strings: ['Front-End Developer', 'Web Designer'],
-   typeSpeed: 50,
-   backSpeed:40,
-   loop:true,
-});
+
+if(document.querySelector('.banner_typed')){
+   var typed = new Typed('.banner_typed', {
+      strings: ['Front-End Developer', 'Web Designer'],
+      typeSpeed: 50,
+      backSpeed:40,
+      loop:true,
+   });
+}
 
 // Darkmode JS ...
 
@@ -19,6 +22,7 @@ $(function () {
    $(window).on('scroll', function () {
       var navPosition = $('#nav_bar').offset().top;
       var scrollSize = $(window).scrollTop();
+      console.log(navPosition);
 
       // Menu Fixed ...
       if (scrollSize > 500) {
@@ -125,6 +129,20 @@ $(function () {
       slidesToShow: 3,
       autoplay: true,
       autoplaySpeed: 1500,
+      responsive:[
+         {
+            breakpoint:992,
+            settings:{
+               slidesToShow:1,
+            }
+         },
+         {
+            breakpoint:576,
+            settings:{
+               slidesToShow:1,
+            }
+         },
+      ]
    });
 
    // FilterZr Initialize...
@@ -137,3 +155,4 @@ $(function () {
 
 
 })
+

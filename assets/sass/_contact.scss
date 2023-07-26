@@ -95,6 +95,10 @@
             h6{
                 @include contact_inner_header;
                 @include titleDivider(0, calc(100% - 92px), 30px);
+                @include xsResponsive(){
+                    text-align: center;
+                    @include titleDivider();
+                }
             }
             .phone{
                 margin-top: 50px;
