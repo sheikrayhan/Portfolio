@@ -68,6 +68,9 @@
         }
         .job_desc{
             padding: 15px;
+            @include xsResponsive(){
+                padding: 7px;
+            }
             h2{
                 color: $primary_textColor;
                 font-size: 30px;
@@ -104,7 +107,7 @@
                     padding-top: 10px;
                 }
                 @include xsResponsive(){
-                    font-size: 14px;
+                    font-size: 12px;
                     padding-top: 5px;
                 }
             }

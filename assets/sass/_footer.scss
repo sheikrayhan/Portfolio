@@ -29,12 +29,13 @@
     height: 30px;
     font-size: 15px;
     color: $secondaryColor;
-    border: none;
+    border: 1px solid $secondaryColor;
     border-radius: 50%;
     background: $primaryColor;
     transition: .4s;
     cursor: pointer;
     display: none;
+    z-index: 99;
     &:hover{
         color: $primaryColor;
         background-color: $secondaryColor;

@@ -16,6 +16,14 @@
             h6 {
                 @include contact_inner_header;
                 @include titleDivider(0,calc(100% - 92px),30px);
+                @include smResponsive(){
+                    text-align: center;
+                    @include titleDivider();
+                }
+                @include xsResponsive(){
+                    text-align: center;
+                    @include titleDivider();
+                }
             }
             form{
                 margin-top: 50px;
