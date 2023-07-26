@@ -95,6 +95,10 @@
             h6{
                 @include contact_inner_header;
                 @include titleDivider(0, calc(100% - 92px), 30px);
+                @include smResponsive(){
+                    text-align: center;
+                    @include titleDivider();
+                }
                 @include xsResponsive(){
                     text-align: center;
                     @include titleDivider();
@@ -102,16 +106,40 @@
             }
             .phone{
                 margin-top: 50px;
+                @include smResponsive(){
+                    justify-content: center;
+                }
+                @include xsResponsive(){
+                    justify-content: center;
+                }
                @include getinTouch;
             }
             .email{
                 @include getinTouch;
+                @include smResponsive(){
+                    justify-content: center;
+                }
+                @include xsResponsive(){
+                    justify-content: center;
+                }
             }
             .address{
                 @include getinTouch;
+                @include smResponsive(){
+                    justify-content: center;
+                }
+                @include xsResponsive(){
+                    justify-content: center;
+                }
             }
             .social_icon{
                 @include social;
+                @include smResponsive(){
+                    justify-content: center;
+                }
+                @include xsResponsive(){
+                    justify-content: center;
+                }
             }
         }
     }
