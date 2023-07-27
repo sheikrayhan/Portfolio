@@ -59,6 +59,12 @@ $(function () {
          scrollTop: 0
       })
    })
+
+   // Preloader Start ...
+    $(window).on('load', function () {
+        $('#preloader').fadeOut(1000);
+    })
+
    // SideMenu Activate ...
    $('#toggleBar').on('click', function(){
       $('#sideMenu').toggleClass('sideMenu_active');
