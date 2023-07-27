@@ -19,22 +19,63 @@
     }
     .sideNav{
         padding: 10px 0px;
+        @include smResponsive(){
+            padding: 5px 0px;
+        }
+        @include xsResponsive(){
+            pad: 0px 0px;
+        }
         .logo{
-            width: 30%;
+            width: 20%;
             img{
-                height: 70px;
-                width: 70px;
+                height: 55px;
+                width: 55px;
+                @include xsResponsive(){
+                    height: 47px;
+                    width: 47px;
+                }
                 border-radius: 50%;
             }
         }
+        .coderName{
+            width: 60%;
+            text-align: center;
+            h4{
+                color: $secondaryColor;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                @include xsResponsive(){
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+            h5{
+                color: $secondaryColor;
+                font-size: 14px;
+                font-weight: 300;
+                margin-top: 5px;
+                @include xsResponsive(){
+                    font-size: 12px;
+                    font-weight: normal;
+                    margin-top: 3px;
+                }
+            }
+        }
         .navIcon{
-            width: 70%;
+            width: 20%;
             text-align: right;
             a{
                 padding: 10px;
+                @include xsResponsive(){
+                    padding: 0px;
+                }
                 i{
                     color: $secondaryColor;
-                    font-size: 30px;
+                    font-size: 25px;
+                    @include xsResponsive(){
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -47,7 +88,7 @@
     width: 200px;
     background-color: $primaryColor;
     box-shadow: $boxShadowColor;
-    top: 90px;
+    top: 0px;
     left: 0;
     margin-left: -250px;
     overflow-y: scroll;
