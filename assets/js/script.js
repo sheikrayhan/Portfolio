@@ -31,6 +31,13 @@ $(function () {
           $('nav').removeClass('active');
       }
 
+      // Small Device Navbar Fixed ...
+      if (scrollSize > 500) {
+         $('#smallNavbar').addClass('smallNavActive');
+      }else {
+         $('#smallNavbar').removeClass('smallNavActive');
+      }
+
       // Brand Name/Img....
       if(scrollSize > 450){
          $('#brandname').show(500);
@@ -51,6 +58,10 @@ $(function () {
       $('html, body').animate({
          scrollTop: 0
       })
+   })
+   // SideMenu Activate ...
+   $('#toggleBar').on('click', function(){
+      $('#sideMenu').toggleClass('sideMenu_active');
    })
 
    // ProgressBar JS ...

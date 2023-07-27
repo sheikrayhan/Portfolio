@@ -1,0 +1,101 @@
+#smallNavbar{
+    background-color: $primaryColor;
+    box-shadow: $boxShadowColor;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    &.smallNavActive{
+        position: fixed;
+        animation: smallnavfixed 1s;
+    }
+    @keyframes smallnavfixed {
+        from {
+            top: -100px;
+        }
+        to {
+            top: 0px;
+        }
+    }
+    .sideNav{
+        padding: 10px 0px;
+        .logo{
+            width: 30%;
+            img{
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+            }
+        }
+        .navIcon{
+            width: 70%;
+            text-align: right;
+            a{
+                padding: 10px;
+                i{
+                    color: $secondaryColor;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+#sideMenu{
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: $primaryColor;
+    box-shadow: $boxShadowColor;
+    top: 90px;
+    left: 0;
+    margin-left: -250px;
+    overflow-y: scroll;
+    z-index: 9999;
+    transition: .5s;
+    &.sideMenu_active{
+        margin-left: 0px;
+    }
+    .img{
+        margin-top: 10px;
+        img{
+            width: 70px;
+            height: 70px;
+            border: 2px solid $secondaryColor;
+            border-radius: 50%;
+        }
+        
+    }
+    ul li{
+        display: block;
+        position: relative;
+        &:hover ul{
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+        a{
+            padding: 10px 10px;
+            color: $primary_textColor;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: linear .4s;
+            transform: scale(1);
+            &:hover{
+                color: $secondaryColor;
+                transform: scale(110%);
+            }
+        }
+        ul{
+            background-color: $primaryColor;
+            position: absolute;
+            left: 10px;
+            top: 150%;
+            visibility: hidden;
+            opacity: 0;
+            transition: .6s;
+            z-index: 99999;
+        }
+    }
+}
