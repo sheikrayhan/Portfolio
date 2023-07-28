@@ -30,6 +30,7 @@
             img{
                 height: 55px;
                 width: 55px;
+                border: 1px solid $secondaryColor;
                 @include xsResponsive(){
                     height: 50px;
                     width: 50px;
@@ -99,12 +100,22 @@
         margin-left: 0px;
     }
     .img{
+        position: relative;
         margin-top: 10px;
         img{
             width: 70px;
             height: 70px;
             border: 2px solid $secondaryColor;
             border-radius: 50%;
+        }
+        i{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 5px;
+            cursor: pointer;
+            color: $secondaryColor;
+            font-size: 20px;
         }
         
     }

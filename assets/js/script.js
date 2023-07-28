@@ -69,6 +69,9 @@ $(function () {
    $('#toggleBar').on('click', function(){
       $('#sideMenu').toggleClass('sideMenu_active');
    })
+   $('#sDeactive').on('click', function() {
+      $('#sideMenu').removeClass('sideMenu_active');
+   })
 
    // ProgressBar JS ...
 
