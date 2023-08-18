@@ -85,6 +85,7 @@
 }
 
 #sideMenu{
+    padding-top: 50px;
     position: fixed;
     height: 100%;
     width: 200px;
@@ -119,41 +120,44 @@
         }
         
     }
-    ul li{
-        display: block;
-        position: relative;
-        &:hover ul{
-            visibility: visible;
-            opacity: 1;
-            top: 100%;
+    ul{
+        text-align: center;
+        li{
+           display: block;
+           position: relative;
+           &:hover ul {
+               visibility: visible;
+               opacity: 1;
+               top: 100%;
+           }
+           a {
+               padding: 10px 10px;
+               color: $primary_textColor;
+               font-size: 15px;
+               font-weight: 300;
+               letter-spacing: 1px;
+               transition: linear .4s;
+               transform: scale(1);
+               @include xsResponsive() {
+                   padding: 7px;
+                   font-size: 14px;
+                   letter-spacing: normal;
+               }
+               &:hover {
+                   color: $secondaryColor;
+                   transform: scale(110%);
+               }
+           }
+           ul {
+               background-color: $primaryColor;
+               position: absolute;
+               left: 10px;
+               top: 150%;
+               visibility: hidden;
+               opacity: 0;
+               transition: .6s;
+               z-index: 99999;
+           }
         }
-        a{
-            padding: 10px 10px;
-            color: $primary_textColor;
-            font-size: 15px;
-            font-weight: 300;
-            letter-spacing: 1px;
-            transition: linear .4s;
-            transform: scale(1);
-            @include xsResponsive(){
-                padding: 7px;
-                font-size: 14px;
-                letter-spacing: normal;
-            }
-            &:hover{
-                color: $secondaryColor;
-                transform: scale(110%);
-            }
-        }
-        ul{
-            background-color: $primaryColor;
-            position: absolute;
-            left: 10px;
-            top: 150%;
-            visibility: hidden;
-            opacity: 0;
-            transition: .6s;
-            z-index: 99999;
-        }
-    }
+    }   
 }
