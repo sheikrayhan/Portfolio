@@ -525,6 +525,12 @@
     }
   }
   .info {
+    @include xsResponsive(){
+      width: 100%;
+    }
+    @include smResponsive(){
+      width: 100%;
+    }
     h5 {
       color: $secondaryColor;
       font-size: 18px;
