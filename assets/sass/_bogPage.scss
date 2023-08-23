@@ -5,6 +5,9 @@
     }
     .blog_container{
         margin-top: 20px;
+        @include xsResponsive(){
+            margin-top: 0px;
+        }
         .blog_section{
             background-color: $primaryColor;
             border-radius: 10px;
@@ -22,16 +25,22 @@
             overflow: hidden;
             border-radius: 10px;
             @include mdResponsive(){
-                height: 50%;
+                width: 100%;
+                height: 33%;
+                text-align: center;
                 margin-top: 35px;
             }
             @include smResponsive(){
-                height: 40%;
+                width: 100%;
+                height: 30%;
+                text-align: center;
                 margin-top: 25px;
             }
             @include xsResponsive(){
-                height: 30%;
-                margin-top: 20px;
+                height: 20%;
+                width: 100%;
+                text-align: center;
+                margin: 10px;
             }
             img{
                 height: 100%;
@@ -43,11 +52,20 @@
         .blog_info{
             width: 70%;
             padding: 30px;
+            @include mdResponsive(){
+                text-align: center;
+                width: 100%;
+                padding-top: 0px;
+            }
             @include smResponsive(){
-                padding: 20px;
+                padding-top: 0px;
+                text-align: center;
+                width: 100%;
             }
             @include xsResponsive(){
-                padding: 10px;
+                padding: 0px 10px 0px 15px;
+                text-align: center;
+                width: 100%;
             }
             .blog_title{
                 h3{
