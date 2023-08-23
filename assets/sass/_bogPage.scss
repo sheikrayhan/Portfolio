@@ -44,6 +44,7 @@
             }
             img{
                 height: 100%;
+                width: 80%;
                 object-fit: cover;
                 border-radius: 10px;
                 transition: all linear .4s;
@@ -63,7 +64,7 @@
                 width: 100%;
             }
             @include xsResponsive(){
-                padding: 0px 10px 0px 15px;
+                padding: 0px 15px 0px 15px;
                 text-align: center;
                 width: 100%;
             }
